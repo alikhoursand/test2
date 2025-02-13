@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Token</title>
+  <style>
+    .fade-enter-active,
+    .fade-leave-active {
+      transition: opacity 0.3s ease;
+    }
+
+    .fade-enter-from,
+    .fade-leave-to {
+      opacity: 0;
+    }
+
+    html {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-attachment: fixed;
+      background: rgb(88, 51, 237);
+      background: linear-gradient(43deg, rgba(88, 51, 237, 1) 9%, rgba(94, 45, 208, 1) 21%, rgba(113, 1, 177, 1) 46%, rgba(0, 0, 0, 1) 100%);
+    }
+
+    body {
+      touch-action: pan-y !important;
+    }
+
+    #app,
+    body,
+    html {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    document.addEventListener('touchmove', e => {
+      if (e.touches.length > 1) {
+        e.preventDefault();
+      }
+    }, { passive: false })
+
+
+  </script>
+</body>
+
+</html>
